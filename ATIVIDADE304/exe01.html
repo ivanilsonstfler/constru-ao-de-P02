@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function lerVetorA() {
+    var vetorA = [];
+    for (var i = 0; i < 10; i++) {
+        vetorA.push(parseInt(prompt("Digite o elemento " + (i+1) + " do vetor A:")));
+    }
+    return vetorA;
+}
+
+function construirVetorB(vetorA) {
+    var vetorB = [];
+    for (var i = 0; i < vetorA.length; i++) {
+        if (i % 2 === 0) { // Se o índice for par
+            vetorB.push(vetorA[i] * 5);
+        } else { // Se o índice for ímpar
+            vetorB.push(vetorA[i] + 5);
+        }
+    }
+    return vetorB;
+}
+
+function exibirVetores(vetorA, vetorB) {
+    console.log("Vetor A:", vetorA.join(", "));
+    console.log("Vetor B:", vetorB.join(", "));
+}
+
+function main() {
+    var vetorA = lerVetorA();
+    var vetorB = construirVetorB(vetorA);
+    exibirVetores(vetorA, vetorB);
+}
+
+main();
+
+</script>
+</html>

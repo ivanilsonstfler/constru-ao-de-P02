@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+  
+function lerVetorA() {
+    var vetorA = [];
+    for (var i = 0; i < 5; i++) {
+        var elemento = parseInt(prompt("elemento do vetor A[" + i + "]:"));
+        vetorA.push(elemento);
+    }
+    return vetorA;
+}
+
+
+function lerVetorB() {
+    var vetorB = [];
+    for (var i = 0; i < 5; i++) {
+        var elemento = parseInt(prompt("elemento do vetor B[" + i + "]:"));
+        vetorB.push(elemento);
+    }
+    return vetorB;
+}
+
+function gerarVetorSoma(vetorA, vetorB) {
+    var vetorSoma = [];
+    for (var i = 0; i < 5; i++) {
+        vetorSoma.push(vetorA[i] + vetorB[i]);
+    }
+    return vetorSoma;
+}
+
+function imprimirVetorSoma(vetorSoma) {
+    console.log("Vetor Soma:");
+    for (var i = 0; i < vetorSoma.length; i++) {
+        console.log("soma[" + i + "] - " + vetorSoma[i]);
+    }
+}
+
+
+function main() {
+    var vetorA = lerVetorA();
+    var vetorB = lerVetorB();
+    var vetorSoma = gerarVetorSoma(vetorA, vetorB);
+    imprimirVetorSoma(vetorSoma);
+}
+
+
+main();
+
+
+</script>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+function calcularDobro(numero) {
+    return numero * 2;
+}
+
+function imprimirDobro(numero) {
+    console.log("********************");
+    console.log("Informe um número: " + numero);
+    console.log("dobro: " + calcularDobro(numero));
+    console.log("********************");
+}
+
+function entradaETriplaImpressao() {
+    for (let i = 0; i < 3; i++) {
+        let numero = parseInt(prompt("Informe um número:"));
+        imprimirDobro(numero);
+    }
+}
+
+entradaETriplaImpressao();
+
+
+</script>
+</html>

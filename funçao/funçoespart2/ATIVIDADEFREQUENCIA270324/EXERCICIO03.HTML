@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Exemplo de Hierarquia</title>
+</head>
+<body bgcolor="white">
+    <img src="hello.jpg" width="10%" height="10%">
+    <form>
+        <table>
+            <tr>
+                <td>Nome:</td>
+                <td><input type="text" name="nome" size="40" value="Fulano Sicrano"></td>
+            </tr>
+            <tr>
+                <td>E-mail:</td>
+                <td><input type="text" size="40" value="fulano@qualquer.coisa.br"></td>
+            </tr>
+            <tr>
+                <td>Href do link:</td>
+                <td><input type="text" size="40"></td>
+            </tr>
+            <tr>
+                <td>Src da imagem:</td>
+                <td><input type="text" size="40"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="button" name="botao" value="Pressione">
+    </form>
+    <img src="linha.png" width="50%">
+    <p><a href="http://www.ifb.edu.br">Outros links</a></p>
+    <script language="javascript">
+        var formulario = document.forms[0];
+        var linkInput = formulario.elements[2];
+        var imagemInput = formulario.elements[3];
+        var nomeInput = formulario.elements[0];
+        var botaoInput = formulario.elements[4];
+
+        linkInput.value = document.links[0].href;
+        imagemInput.value = document.images[0].src;
+        document.write("O nome que aparece no campo nome do formulario é " + nomeInput.value);
+        var texto = prompt("Qual texto deve aparecer no botao ? ");
+        botaoInput.value = texto;
+    </script>
+</body>
+</html>

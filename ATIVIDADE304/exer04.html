@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    while (true) {
+    var texto = prompt("Digite um texto (digite 'fim' para encerrar):");
+
+    if (texto.toLowerCase() === 'fim') {
+        console.log("Programa encerrado.");
+        break; 
+    }
+
+    var maiusculas = texto.toUpperCase();
+    var minusculas = texto.toLowerCase();
+
+
+    console.log("Texto em maiúsculas:", maiusculas);
+    console.log("Texto em minúsculas:", minusculas);
+}
+
+</script>
+</html>

@@ -1,14 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos</title>
+    <link rel="stylesheet" href="./eventos copy.css">
+    <title>Diversos Eventos</title>
+    <style>
+        body{
+            background-color: salmon;
+        }
+        img{
+            border: 0;
+            width: 70px;
+            height: 70px;
+
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>Diversos Eventos</h1>
+    <h2>Adicionando escutadores de Eventos diretamente no HTML</h2>
+    <a href="javascript: nada()">
+        <img src="./hello1.jpg" alt="#" onclick="clica" ondragover="entrei('kit1')" onmouseout="sai()">
+    </a>
+    <a href="javascript: nada()">
+        <img src="./hello2.png" alt="" onclick="clica()" onmouseover="entrei" onmouseout="sai()">
+    </a>
+    <a href="javascript: nada()">
+        <img src="./hello3.gif" alt="">
+    </a>
+    <form name="saida">
+        <input type="text" name="texto" id="#">
+    </form>
 </body>
 <script>
-    
+    function nada() {
+        
+    }
+    function clica(){
+        document.saida.texto.value = "clicou";
+    }
+    function entrei(nome){
+        document.saida.texto.value = nome;
+    }
+    function sai(){
+        document.saida.texto.value = " saiu ";
+    }
 </script>
 </html>

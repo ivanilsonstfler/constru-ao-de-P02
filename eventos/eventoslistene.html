@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./eventos copy.css">
+    <title>Diversos Eventos</title>
+    <style>
+        body{
+            background-color: salmon;
+        }
+        img{
+            border: 0;
+            width: 70px;
+            height: 70px;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Diversos Eventos</h1>
+    <h2>Adicionando escutadores de Eventos diretamente no HTML</h2>
+   
+    <a href="javascript: nada()" id="kit1">
+        <img src="./hello1.jpg" name="kit1"/>
+    </a>
+    <a href="javascript: nada()">
+        <img src="./hello2.png" name="kit2" id="kit2">
+    </a>
+    <a href="javascript: nada()" id="kit3">
+        <img src="./hello3.gif" name="kit3"/>
+    </a>
+    <form name="saida">
+        <input type="text" name="texto" id="#">
+    </form>
+</body>
+<script>
+    // const link1 = document.getElementById("kit1")
+    // console.log(link1);
+    // link1.addEventListener("click", clica);
+    // link1.addEventListener("mouseout", sai);
+    // link1.addEventListener("click", clica);
+
+    // const link2 = document.getElementById("kit2")
+    // console.log(link2);
+    // link2.addEventListener("click", clica);
+    // link2.addEventListener("mouseout", sai);
+    // link2.addEventListener("click", clica);
+
+
+    // const link3 = document.getElementById("kit3")
+    // console.log(link3);
+    // link3.addEventListener("click", clica);
+    // link3.addEventListener("mouseout", sai);
+    // link3.addEventListener("click", clica);
+const links = document.querySelectorAll("a");
+console.log(links);
+// for(i=0;i<links.length;i++)
+// {
+//     links[i].addEventListener("click", clica);
+//     links[i].addEventListener("mouseout", sai);
+//     links[i].addEventListener("mouseover", (evento) => {
+//         entrei(evento.target.name);
+//     });
+// }
+links.forEach( (link) => 
+{
+    link.addEventListener("click",clica)
+    link.addEventListener("nouseout",sai)
+    link.addEventListener("mouseover",(evento) => {
+        entrei(evento.target.name);
+    });
+});
+    function nada() {
+        
+    }
+    function clica(){
+        document.saida.texto.value = "clicou";
+    }
+    function entrei(nome){
+        document.saida.texto.value = nome;
+    }
+    function sai(){
+        document.saida.texto.value = " saiu ";
+    }
+</script>
+</html>
